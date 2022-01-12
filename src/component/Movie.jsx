@@ -1,5 +1,5 @@
 function Movie(props) {
-  //деструктуризируем пропсы для карточки
+  
   const {
     Title: title,
     Year: year,
