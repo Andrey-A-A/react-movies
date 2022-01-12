@@ -452,11 +452,10 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 
 
- //const API_KEY = process.env.REACT_APP_API_KEY;
-//console.log(API_KEY);
 
 
 
+var API_KEY = "b6d65065";
 
 var Main = /*#__PURE__*/function (_React$Component) {
   _inherits(Main, _React$Component);
@@ -485,10 +484,10 @@ var Main = /*#__PURE__*/function (_React$Component) {
       _this.setState({
         loading: true
       }); //сначала, до получения данных, включается прелоадер
-      //fetch(`https://www.omdbapi.com/?apikey=${API_KEY}&s=${str}${type !== 'all' ? `&type=${type}` : ''}`)
 
 
-      fetch("https://www.omdbapi.com/?apikey=b6d65065&s=".concat(str).concat(type !== 'all' ? "&type=".concat(type) : '')).then(function (response) {
+      fetch("https://www.omdbapi.com/?apikey=".concat(API_KEY, "&s=").concat(str).concat(type !== 'all' ? "&type=".concat(type) : '')) //fetch(`https://www.omdbapi.com/?apikey=b6d65065&s=${str}${type !== 'all' ? `&type=${type}` : ''}`)
+      .then(function (response) {
         return response.json();
       }).then(function (data) {
         return _this.setState({
@@ -515,8 +514,8 @@ var Main = /*#__PURE__*/function (_React$Component) {
     function componentDidMount() {
       var _this2 = this;
 
-      //fetch(`https://www.omdbapi.com/?apikey=${API_KEY}&s=moscow`)
-      fetch("https://www.omdbapi.com/?apikey=b6d65065&s=moscow").then(function (response) {
+      fetch("https://www.omdbapi.com/?apikey=".concat(API_KEY, "&s=moscow")) //fetch(`https://www.omdbapi.com/?apikey=b6d65065&s=moscow`)
+      .then(function (response) {
         return response.json();
       }).then(function (data) {
         return _this2.setState({
@@ -31704,7 +31703,6 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-console.log("b6d65065");
 react_dom__WEBPACK_IMPORTED_MODULE_1__.render( /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(react__WEBPACK_IMPORTED_MODULE_0__.StrictMode, {
   children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_App__WEBPACK_IMPORTED_MODULE_3__["default"], {})
 }), document.getElementById('root'));
